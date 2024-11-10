@@ -1,0 +1,99 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Game container */
+.game {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Game board */
+.game-board {
+  margin: 20px;
+  text-align: center;
+}
+
+/* Status message */
+.status {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Board styles */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+}
+
+/* Square styles */
+.Square {
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: #fff;
+  border: 2px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Square hover effect */
+.Square:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+}
+
+/* Button styles for moves */
+.game-info {
+  margin-top: 20px;
+  margin-bottom: 100px
+}
+
+.game-info button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.game-info button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .game {
+    display: flex;
+    flex-direction: column;
+  }
+  .Square {
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+  }
+
+  .status {
+    font-size: 20px;
+  }
+
+  .game-info button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
